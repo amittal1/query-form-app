@@ -1,0 +1,60 @@
+{
+  "header": {
+    "id": "heading1",
+    "level": 1,
+    "title": "Payroll Enquiry",
+    "description": "Please use this form for any Payroll related enquiries.",
+    "css": "font-size: 1em; font-weight: inherit; margin: 0px;"
+  },
+  "body": {
+    "id": "body",
+    "description": "",
+    "formfields": [
+      {
+        "id": "field1",
+        "label": "What does your enquiry relate to?",
+        "field_type": "select",
+        "options": [
+          "Incorrect Pay",
+          "Missing Expense",
+          "Change of Bank Details",
+          "Change of Address",
+          "Other"
+        ],
+        "required": "true"
+      },
+      {
+        "id": "field2",
+        "label": "Date of payslip being queried (if applicable) ",
+        "field_type": "date",
+        "required": {
+          "id": "field1",
+          "values": [
+            "Incorrect Pay",
+            "Missing Expense"
+          ],
+          "defaultvalue": "false"
+        }
+      },
+      {
+        "id": "field3",
+        "label": "Query",
+        "field_type": "textarea",
+        "required": "true"
+      }
+    ],
+    "buttons": [
+      {
+        "id": "button1",
+        "name": "Submit",
+        "type": "submit"
+      },
+      {
+        "id": "button2",
+        "name": "Reset",
+        "type": "reset"
+      }
+    ]
+  }
+
+}
